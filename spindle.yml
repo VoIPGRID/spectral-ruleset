@@ -1,0 +1,4 @@
+extends: [./zalando.yml]
+rules:
+  should-use-x-extensible-enum: "off"
+  must-use-problem-json-for-errors: "off"
