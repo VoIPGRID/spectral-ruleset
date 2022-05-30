@@ -14,7 +14,7 @@ describe('MUST contain API meta information [218]', () => {
     expect(result).toEqual([
       expect.objectContaining({
         code: 'oas3-schema',
-        message: 'Object should have required property `info`.',
+        message: 'Object must have required property "info".',
         severity: DiagnosticSeverity.Error,
       }),
     ]);
@@ -26,7 +26,7 @@ describe('MUST contain API meta information [218]', () => {
     expect(result).toEqual([
       expect.objectContaining({
         code: 'oas3-schema',
-        message: '`info` property type should be object.',
+        message: '"info" property type must be object.',
         severity: DiagnosticSeverity.Error,
       }),
     ]);
@@ -38,7 +38,7 @@ describe('MUST contain API meta information [218]', () => {
     expect(result).toEqual([
       expect.objectContaining({
         code: 'oas3-schema',
-        message: '`info` property should have required property `title`.',
+        message: '"info" property must have required property "title".',
         severity: DiagnosticSeverity.Error,
       }),
     ]);
@@ -50,7 +50,7 @@ describe('MUST contain API meta information [218]', () => {
     expect(result).toEqual([
       expect.objectContaining({
         code: 'oas3-schema',
-        message: '`info` property should have required property `version`.',
+        message: '"info" property must have required property "version".',
         severity: DiagnosticSeverity.Error,
       }),
     ]);
@@ -127,18 +127,6 @@ describe('MUST contain API meta information [218]', () => {
       expect.objectContaining({
         code: 'must-have-info-x-api-id',
         message: 'Missing `info.x-api-id`.',
-        severity: DiagnosticSeverity.Error,
-      }),
-    ]);
-  });
-
-  test('Detect missing `info.x-audience`', async () => {
-    delete openApi.info['x-audience'];
-    const result = await lint(openApi);
-    expect(result).toEqual([
-      expect.objectContaining({
-        code: 'must-have-info-x-audience',
-        message: 'Missing `info.x-audience`.',
         severity: DiagnosticSeverity.Error,
       }),
     ]);
