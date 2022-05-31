@@ -3,7 +3,7 @@ const reRegularHypenedWord = new RegExp('^([\/a-z][a-z0-9\-\/]*)$');
 
 
 const check = (path) => {
-const parts = path.split('/');
+  const parts = path.split('/');
   parts.forEach((part) => {
     if (part != '' && !part.match(rePathParam) && !part.match(reRegularHypenedWord)){
       console.log(part, part.match(rePathParam), part.match(reRegularHypenedWord));
