@@ -24,7 +24,7 @@ rules:
   # must-provide-api-audience: "off"
   must-specify-default-response: "off"
   # must-use-problem-json-as-default-response: "off"
-  # must-use-problem-json-for-errors: "off"
+  must-use-problem-json-for-errors: "off"
   # must-use-semantic-versioning: "off"
   should-not-use-api-as-base-path: "off"
   # should-prefer-standard-media-type-names: "off"
