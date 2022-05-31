@@ -1,5 +1,40 @@
 extends: [./zalando.yml]
+functions: [must-use-lowercase-with-hypens-for-path-segements]
 rules:
-  should-use-x-extensible-enum: "off"
+  # must-have-info-description: "off"
+  must-not-use-uri-versioning: "off"
+  # must-provide-api-identifiers: "off"
+  # must-use-normalized-paths-without-empty-path-segments: "off"
+  # must-use-normalized-paths-without-trailing-slash: "off"
+  must-use-snake-case-for-property-names: "off"
+  must-use-snake-case-for-query-parameters: "off"
+  must-use-standard-http-status-codes: "off"
   must-use-valid-problem-json-schema: "off"
-  must-use-problem-json-for-errors: "off"
+  # should-declare-enum-values-using-upper-snake-case-format: "off"
+  # should-limit-number-of-resource-types: "off"
+  # should-limit-number-of-sub-resource-levels: "off"
+  should-use-hyphenated-pascal-case-for-header-parameters: "off"
+  # should-use-x-extensible-enum: "off"
+  must-always-return-json-objects-as-top-level-data-structures: "off"
+  # must-define-a-format-for-number-types: "off"
+  must-have-info-contact-email: "off"
+  must-have-info-contact-name: "off"
+  must-have-info-contact-url: "off"
+  must-have-info-x-api-id: "off"
+  # must-provide-api-audience: "off"
+  must-specify-default-response: "off"
+  # must-use-problem-json-as-default-response: "off"
+  # must-use-problem-json-for-errors: "off"
+  # must-use-semantic-versioning: "off"
+  should-not-use-api-as-base-path: "off"
+  # should-prefer-standard-media-type-names: "off"
+  # should-use-well-understood-http-status-codes: "off"
+
+  must-use-lowercase-with-hypens-for-path-segements:
+    message: Path segments have to be lowercase separate words with hyphens
+    description: MUST use lowercase separate words with hyphens for path segments [129]
+    documentationUrl: https://opensource.zalando.com/restful-api-guidelines/#129
+    severity: error
+    given: $.paths.*~
+    then:
+      function: "must-use-lowercase-with-hypens-for-path-segements"
