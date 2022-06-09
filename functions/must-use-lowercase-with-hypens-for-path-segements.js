@@ -6,7 +6,6 @@ const check = (path) => {
   const parts = path.split('/');
   parts.forEach((part) => {
     if (part != '' && !part.match(rePathParam) && !part.match(reRegularHypenedWord)){
-      console.log(part, part.match(rePathParam), part.match(reRegularHypenedWord));
       throw 'Path must only use hypens and lower case!';
     }
   });
